@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Shark Soar | Rhea & Adit</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="img/Shark.gif">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <div class="background"></div>
+  <img src="img/Shark.gif" alt="invalid-img" class="shark" id="shark-1">
+  <div class="message" style="text-align: center">
+    Start Game 
+    <br><br>
+    <p>Press Spacebar <br>or<br> Tap the Screen</p>
+  </div>
+  <div class="score">
+    <span class="score-title"></span>
+    <span class="score-value"></span>
+  </div>
+  <audio id="explosion-audio" src="audio/explode.wav"></audio>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDsr8ELcghASRihSjAZSdqH7I49Wu3J7xM",
+      authDomain: "rhe-games.firebaseapp.com",
+      projectId: "rhe-games",
+      storageBucket: "rhe-games.appspot.com",
+      messagingSenderId: "382638757027",
+      appId: "1:382638757027:web:2708e8e0c6027194f3db16",
+      measurementId: "G-JPKFRYYDP0"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+</body>
+
+</html>

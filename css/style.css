@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'VT323', monospace;
+  -webkit-user-select: none; /* Untuk Safari */
+  -moz-user-select: none; /* Untuk Firefox */
+  -ms-user-select: none; /* Untuk Internet Explorer/Edge */
+  user-select: none; /* Untuk browser modern */
+  touch-action: manipulation;
+}
+
+.background{
+  height: 100vh;
+  width: 100vw;
+  background: url('../img/Background.png') no-repeat center center fixed;
+  background-size:cover;
+}
+
+.shark{
+  width: 15vw; /* Menggunakan persentase lebar */
+  position: fixed;
+  top: 40vh;
+  left: 30vw;
+  z-index: 100;
+}
+
+.seaMines {
+  position: fixed;
+  top: 50vh;
+  left: 100vw;
+  height: 70vh;
+  width: 6vw;
+  background-image: url(../img/seaMines.png);
+  background-size: contain;
+  background-repeat: repeat-y;
+  overflow: hidden;
+}
+
+.message{
+  position: absolute;
+  z-index: 10;
+  color: #000;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.messageStyle{
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 25px;
+}
+
+.score{
+  position: fixed;
+  z-index: 10;
+  height: 10vh;
+  font-weight: 100;
+  color: white;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: #000;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
+
+.score-value{
+  color: gold;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) { /* Atur breakpoint sesuai kebutuhan Anda */
+  .shark {
+    width: 30vw;
+    top: 30vh;
+    left: 10vw;
+  }
+
+  .seaMines {
+    width: 12vw;
+  }
+
+  .message {
+    font-size: 30px;
+    top: 50%;
+  }
+
+  .score {
+    font-size: 8vh;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .message {
+    font-size: 40px;
+    top: 50%;
+  }
+
+  .shark {
+    width: 20vw;
+  }
+
+  .score {
+    font-size: 8vh;
+  }
+
+  .seaMines {
+    width: 10vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .shark {
+    width: 18vw;
+    top: 30vh;
+    left: 10vw;
+  }
+
+  .message {
+    font-size: 50px;
+    top: 50%;
+  }
+
+  .score {
+    font-size: 8vh;
+  }
+
+  .seaMines {
+    width: 8vw;
+  }
+} 
+
+@media only screen and (min-width: 1440px) {
+  .seaMines {
+    width: 6vw;
+  }
+
+  .shark {
+    width: 13vw;
+    top: 30vh;
+    left: 10vw;
+  }
+
+}
